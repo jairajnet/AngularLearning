@@ -15,4 +15,4 @@ let emp=new Employee(1,'Jairaj','John Street');
 let emp2=new Employee(1,'Hemant','Nagda');
 
 console.log(emp);
-console.log(emp2);
+console.log(emp);
