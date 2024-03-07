@@ -44,10 +44,10 @@ class Manager extends Employee {
         super(id, name, address);
     }
 }
-let emp = new Employee(1, 'Jairaj', 'John Street');
+let emp = new Employee(1, 'Jairaj', { street: "ABC", city: "Udaipur", pin: "313001", state: "Rajasthan" });
 console.log(Employee.getMemberCount());
-let Manager1 = new Manager(2, 'Dhivi', 'Pannashray');
+//let Manager1=new Manager(2,'Dhivi','Pannashray');
 emp.empID = 100;
-console.log(emp.empID);
+console.log(emp);
 console.log(emp.getNameWithAddress());
-console.log(Manager1.getNameWithAddress());
+//console.log(Manager1.getNameWithAddress());
