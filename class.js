@@ -5,8 +5,11 @@ class Employee {
         this.name = name;
         this.address = address;
     }
+    getNameWithAddress() {
+        // return this.name + " " + this.address;
+        return `${this.name} stays at ${this.address}`;
+    }
 }
 let emp = new Employee(1, 'Jairaj', 'John Street');
-let emp2 = new Employee(1, 'Hemant', 'Nagda');
 console.log(emp);
-console.log(emp2);
+console.log(emp.getNameWithAddress());
