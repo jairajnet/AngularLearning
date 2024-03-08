@@ -11,6 +11,7 @@ var __classPrivateFieldGet = (this && this.__classPrivateFieldGet) || function (
     return kind === "m" ? f : kind === "a" ? f.call(receiver) : f ? f.value : state.get(receiver);
 };
 var _Employee_id;
+Object.defineProperty(exports, "__esModule", { value: true });
 class Employee {
     constructor(id, name, address) {
         //id : number; its a public
@@ -36,6 +37,10 @@ class Employee {
     set empID(id) {
         __classPrivateFieldSet(this, _Employee_id, id, "f");
     }
+    //--------------------------------------
+    Login() {
+        return { name: "Jairaj", age: 40, email: "", id: 1 };
+    }
 }
 _Employee_id = new WeakMap();
 // polymorphysm with new class
@@ -44,10 +49,17 @@ class Manager extends Employee {
         super(id, name, address);
     }
 }
-let emp = new Employee(1, 'Jairaj', { street: "ABC", city: "Udaipur", pin: "313001", state: "Rajasthan" });
+let emp = new Employee(1, "Jairaj", {
+    street: "ABC",
+    city: "Udaipur",
+    pin: "313001",
+    state: "Rajasthan",
+});
 console.log(Employee.getMemberCount());
 //let Manager1=new Manager(2,'Dhivi','Pannashray');
 emp.empID = 100;
 console.log(emp);
 console.log(emp.getNameWithAddress());
+console.log(emp.Login());
 //console.log(Manager1.getNameWithAddress());
+//use the interafce
